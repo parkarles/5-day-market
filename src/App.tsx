@@ -1,25 +1,30 @@
 import React from "react";
-import logo from "./logo.svg";
+import { Route, Switch } from 'react-router-dom';
 import "./App.css";
+import ContextProvider from "./contexts/Layout";
+import { Helmet } from 'react-helmet-async';
 
-function App() {
+import Home from "./components/Home";
+import Header from "./components/Header";
+
+// interface AppProps {}
+
+const App: React.FC = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ContextProvider>
+      <Helmet>
+        <title>5-days market</title>
+        <meta
+          name="description"
+          content="한국의 전통 오일장"
+          charSet="utf-8"
+        />
+      </Helmet>
+        <Switch>
+          <Route path="/" component={Home} exact />
+          <Route path="/abc" component={Home} />
+        </Switch>
+    </ContextProvider>
   );
 }
 
