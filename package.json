@@ -2,6 +2,7 @@
   "name": "5-day-market",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://gngsn.github.io/5-day-market",
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.1",
     "@testing-library/jest-dom": "^5.11.4",
@@ -34,7 +35,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint",
-    "lint:fix": "eslint --fix src/*"
+    "lint:fix": "eslint --fix src/*",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

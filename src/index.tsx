@@ -26,7 +26,7 @@ const store = createStore(
 ReactDOM.render(
   <HelmetProvider>
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename="/5-day-market">
         <App />
       </BrowserRouter>
     </Provider>
