@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/5-day-market/static/css/main.a617e044.chunk.css",
-    "main.js": "/5-day-market/static/js/main.4455cefc.chunk.js",
-    "main.js.map": "/5-day-market/static/js/main.4455cefc.chunk.js.map",
-    "runtime-main.js": "/5-day-market/static/js/runtime-main.d3a0f774.js",
-    "runtime-main.js.map": "/5-day-market/static/js/runtime-main.d3a0f774.js.map",
-    "static/js/2.2114f0bb.chunk.js": "/5-day-market/static/js/2.2114f0bb.chunk.js",
-    "static/js/2.2114f0bb.chunk.js.map": "/5-day-market/static/js/2.2114f0bb.chunk.js.map",
-    "static/js/3.eb25584e.chunk.js": "/5-day-market/static/js/3.eb25584e.chunk.js",
-    "static/js/3.eb25584e.chunk.js.map": "/5-day-market/static/js/3.eb25584e.chunk.js.map",
+    "main.js": "/5-day-market/static/js/main.977c2661.chunk.js",
+    "main.js.map": "/5-day-market/static/js/main.977c2661.chunk.js.map",
+    "runtime-main.js": "/5-day-market/static/js/runtime-main.794db01a.js",
+    "runtime-main.js.map": "/5-day-market/static/js/runtime-main.794db01a.js.map",
+    "static/js/2.957e181c.chunk.js": "/5-day-market/static/js/2.957e181c.chunk.js",
+    "static/js/2.957e181c.chunk.js.map": "/5-day-market/static/js/2.957e181c.chunk.js.map",
+    "static/js/3.04a18415.chunk.js": "/5-day-market/static/js/3.04a18415.chunk.js",
+    "static/js/3.04a18415.chunk.js.map": "/5-day-market/static/js/3.04a18415.chunk.js.map",
     "index.html": "/5-day-market/index.html",
     "static/css/main.a617e044.chunk.css.map": "/5-day-market/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.2114f0bb.chunk.js.LICENSE.txt": "/5-day-market/static/js/2.2114f0bb.chunk.js.LICENSE.txt",
+    "static/js/2.957e181c.chunk.js.LICENSE.txt": "/5-day-market/static/js/2.957e181c.chunk.js.LICENSE.txt",
     "static/media/broom.f5c0fd94.png": "/5-day-market/static/media/broom.f5c0fd94.png",
     "static/media/gat.77b315c1.png": "/5-day-market/static/media/gat.77b315c1.png",
     "static/media/homi.99f8673a.png": "/5-day-market/static/media/homi.99f8673a.png",
@@ -29,9 +29,9 @@
     "static/media/tal.310fa760.png": "/5-day-market/static/media/tal.310fa760.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.d3a0f774.js",
-    "static/js/2.2114f0bb.chunk.js",
+    "static/js/runtime-main.794db01a.js",
+    "static/js/2.957e181c.chunk.js",
     "static/css/main.a617e044.chunk.css",
-    "static/js/main.4455cefc.chunk.js"
+    "static/js/main.977c2661.chunk.js"
   ]
 }
