@@ -3,14 +3,18 @@ import { useDispatch, useSelector } from "react-redux";
 import { useCallback } from "react";
 import { RootState, actions } from "../../modules";
 
+import storage from "../storage";
+
 export default function useHeader() {
     const dispatch = useDispatch();
     const menu = useSelector((state: RootState) => state.header.menu);
-    const { setMenu } = actions;
+    const { setMenu:setMenuAction} = actions;
     
-    const onMenuClick = useCallback((select = "MAGAZINE") => {
-        dispatch(setMenu(select));
+    const setMenu = useCallback((select = "MAGAZINE", save = false) => {
+        dispatch(setMenuAction(select));
+        if (save)
+            storage.setItem("CURRENT_MENU", select);
     }, [dispatch]);
 
-    return { menu, onMenuClick };
+    return { menu, setMenu };
 }

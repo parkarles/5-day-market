@@ -5,13 +5,24 @@ import { Link } from "react-router-dom";
 import { CartIcon, MyPageIcon } from "../static/svg";
 import palette from "../lib/styles/palette";
 import useHeader from "../lib/hooks/useHeader";
+import storage from "../lib/storage";
 
 const Header = () => {
-    const { menu: currentMenu, onMenuClick } = useHeader();
-    const listItems = [{ title: "MAGAZINE", link: "/" },
-    { title: "MARKET", link: "/market" },
-    { title: "CONTACT", link: "/contact" },
-    { title: "ABOUT", link: "/about" }];
+    const { menu, setMenu } = useHeader();
+
+    const menuLoader = () => {
+        const menu = storage.getItem('CURRENT_MENU');
+        if (!menu) return;
+        const { setMenu } = useHeader();
+        setMenu(menu);
+    };
+    menuLoader();
+
+    const listItems = [
+        { title: "MAGAZINE", link: "/" },
+        { title: "MARKET", link: "/market" },
+        { title: "CONTACT", link: "/contact" },
+        { title: "ABOUT", link: "/about" }];
 
     return (
         <Block>
@@ -20,7 +31,7 @@ const Header = () => {
                     <ul>
                         {
                             listItems.map((item) => (
-                                <li className={item.title === currentMenu ? "action" : undefined} key={item.title} onClick={() => onMenuClick(item.title)}>
+                                <li className={item.title === menu ? "action" : undefined} key={item.title} onClick={() => setMenu(item.title, true)}>
                                     <Link to={item.link}>
                                         {item.title}
                                     </Link>

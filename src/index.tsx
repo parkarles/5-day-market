@@ -23,6 +23,7 @@ const store = createStore(
   composeWithDevTools(),
 );
 
+
 ReactDOM.render(
   <HelmetProvider>
     <Provider store={store}>

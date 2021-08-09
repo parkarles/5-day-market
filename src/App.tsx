@@ -5,6 +5,7 @@ import ContextProvider from "./components/Layout";
 import { Helmet } from "react-helmet-async";
 
 import Home from "./components/Home";
+import Market from "./components/Market";
 
 const App: React.FC = () => {
   return (
@@ -19,7 +20,7 @@ const App: React.FC = () => {
       </Helmet>
         <Switch>
           <Route path="/" component={Home} exact />
-          <Route path="/market" component={Home} />
+          <Route path="/market" component={Market} />
           <Route path="/contact" component={Home} />
           <Route path="/about" component={Home} />
         </Switch>
