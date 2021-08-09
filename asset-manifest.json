@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/5-days-market/static/css/main.a617e044.chunk.css",
+    "main.js": "/5-days-market/static/js/main.4455cefc.chunk.js",
+    "main.js.map": "/5-days-market/static/js/main.4455cefc.chunk.js.map",
+    "runtime-main.js": "/5-days-market/static/js/runtime-main.9752a6b8.js",
+    "runtime-main.js.map": "/5-days-market/static/js/runtime-main.9752a6b8.js.map",
+    "static/js/2.c3a0cd80.chunk.js": "/5-days-market/static/js/2.c3a0cd80.chunk.js",
+    "static/js/2.c3a0cd80.chunk.js.map": "/5-days-market/static/js/2.c3a0cd80.chunk.js.map",
+    "static/js/3.eb25584e.chunk.js": "/5-days-market/static/js/3.eb25584e.chunk.js",
+    "static/js/3.eb25584e.chunk.js.map": "/5-days-market/static/js/3.eb25584e.chunk.js.map",
+    "index.html": "/5-days-market/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/5-days-market/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.c3a0cd80.chunk.js.LICENSE.txt": "/5-days-market/static/js/2.c3a0cd80.chunk.js.LICENSE.txt",
+    "static/media/broom.f5c0fd94.png": "/5-days-market/static/media/broom.f5c0fd94.png",
+    "static/media/gat.77b315c1.png": "/5-days-market/static/media/gat.77b315c1.png",
+    "static/media/homi.99f8673a.png": "/5-days-market/static/media/homi.99f8673a.png",
+    "static/media/hover_gradient.1b8ddeb8.png": "/5-days-market/static/media/hover_gradient.1b8ddeb8.png",
+    "static/media/ic-cart.b9cdc1f9.svg": "/5-days-market/static/media/ic-cart.b9cdc1f9.svg",
+    "static/media/ic-facebook.c593842c.svg": "/5-days-market/static/media/ic-facebook.c593842c.svg",
+    "static/media/ic-insta.65eccf4e.svg": "/5-days-market/static/media/ic-insta.65eccf4e.svg",
+    "static/media/ic-mypage.7687bc05.svg": "/5-days-market/static/media/ic-mypage.7687bc05.svg",
+    "static/media/ic-twitter.b1ef0835.svg": "/5-days-market/static/media/ic-twitter.b1ef0835.svg",
+    "static/media/ic-youtube.6b865a96.svg": "/5-days-market/static/media/ic-youtube.6b865a96.svg",
+    "static/media/img-logo.49494bf1.svg": "/5-days-market/static/media/img-logo.49494bf1.svg",
+    "static/media/main-logo.86266f41.svg": "/5-days-market/static/media/main-logo.86266f41.svg",
+    "static/media/meadeup.6171953e.png": "/5-days-market/static/media/meadeup.6171953e.png",
+    "static/media/onggi.a01fee3e.png": "/5-days-market/static/media/onggi.a01fee3e.png",
+    "static/media/tal.310fa760.png": "/5-days-market/static/media/tal.310fa760.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9752a6b8.js",
+    "static/js/2.c3a0cd80.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.4455cefc.chunk.js"
+  ]
+}
