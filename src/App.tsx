@@ -1,15 +1,12 @@
 import React from "react";
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch } from "react-router-dom";
 import "./App.css";
-import ContextProvider from "./contexts/Layout";
-import { Helmet } from 'react-helmet-async';
+import ContextProvider from "./components/Layout";
+import { Helmet } from "react-helmet-async";
 
 import Home from "./components/Home";
-import Header from "./components/Header";
 
-// interface AppProps {}
-
-const App: React.FC = (props) => {
+const App: React.FC = () => {
   return (
     <ContextProvider>
       <Helmet>
@@ -22,7 +19,9 @@ const App: React.FC = (props) => {
       </Helmet>
         <Switch>
           <Route path="/" component={Home} exact />
-          <Route path="/abc" component={Home} />
+          <Route path="/market" component={Home} />
+          <Route path="/contact" component={Home} />
+          <Route path="/about" component={Home} />
         </Switch>
     </ContextProvider>
   );

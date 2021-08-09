@@ -6,6 +6,12 @@ const BackgroundStyle = createGlobalStyle`
   body {
     background: ${palette.ivory0};
   }
+  body * {
+    box-sizing: border-box;
+  }
+  h1, h2, h3, h4, h5, p {
+    font-family: 'Roboto';
+  }
 `;
 
 export type MainTemplateProps = {

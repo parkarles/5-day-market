@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { createStore } from "redux";
+import { RootState } from "./modules";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
@@ -10,9 +11,15 @@ import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
 import reportWebVitals from "./reportWebVitals";
 import { HelmetProvider } from "react-helmet-async";
 
+declare global {
+  interface Window {
+    __REDUX_STATE__: RootState;
+  }
+}
+
 const store = createStore(
   rootReducer,
-  (window as any).__REDUX_STATE__,
+  window.__REDUX_STATE__,
   composeWithDevTools(),
 );
 

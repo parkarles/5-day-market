@@ -1,22 +1,17 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 import { CartIcon, MyPageIcon } from "../static/svg";
 import palette from "../lib/styles/palette";
 import useHeader from "../lib/hooks/useHeader";
-// export type HomePageProps = {};
 
 const Header = () => {
     const { menu: currentMenu, onMenuClick } = useHeader();
-    const listItems = [{ title: 'MAGAZINE', link: '/' },
-    { title: 'MARKET', link: '/market' },
-    { title: 'CONTACT', link: '/contact' },
-    { title: 'ABOUT', link: '/about' }];
-
-    useEffect(() => {
-        console.log('currentMenu : ', currentMenu)
-    }, [currentMenu]);
+    const listItems = [{ title: "MAGAZINE", link: "/" },
+    { title: "MARKET", link: "/market" },
+    { title: "CONTACT", link: "/contact" },
+    { title: "ABOUT", link: "/about" }];
 
     return (
         <Block>
@@ -25,7 +20,7 @@ const Header = () => {
                     <ul>
                         {
                             listItems.map((item) => (
-                                <li className={item.title === currentMenu ? 'action' : undefined} key={item.title} onClick={() => onMenuClick(item.title)}>
+                                <li className={item.title === currentMenu ? "action" : undefined} key={item.title} onClick={() => onMenuClick(item.title)}>
                                     <Link to={item.link}>
                                         {item.title}
                                     </Link>
@@ -45,6 +40,9 @@ const Header = () => {
 
 const Block = styled.div`
   height: 13rem;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 `;
 
 const Inner = styled.div`
@@ -75,6 +73,9 @@ const Menu = styled.div`
 `;
 
 const UserMenu = styled.div`
+    & svg:first-child { 
+        margin-right: 1rem;
+    }
 `;
 
 export default Header;

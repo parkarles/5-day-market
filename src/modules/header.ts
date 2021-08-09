@@ -5,7 +5,7 @@ export interface HeaderState {
     expand: boolean;
 }
 
-const initialState: HeaderState = {
+export const initialState: HeaderState = {
     menu: 'MAGAZINE',
     expand: false
 };
@@ -16,13 +16,15 @@ const headerSlice = createSlice({
     reducers: {
         setMenu(
             state,
-            action: PayloadAction<{
-                menu: string;
-                expand?: boolean | null;
-            }>,
+            action: PayloadAction<string>,
         ) {
-            state.menu = action.payload.menu;
-            state.expand = action.payload.expand || false;
+            state.menu = action.payload;
+        },
+        setFullSizeMenu(state) {
+            state.expand = true;
+        },
+        setBasicSizeMenu(state) {
+            state.expand = false;
         },
         leaveUser(state) {
             state.menu = initialState.menu;
@@ -31,5 +33,5 @@ const headerSlice = createSlice({
     },
 });
 
-// export const { setMenu, leaveUser } = headerSlice.actions;
+export const headerActions = headerSlice.actions;
 export default headerSlice;

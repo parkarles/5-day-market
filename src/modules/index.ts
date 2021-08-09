@@ -1,18 +1,17 @@
-import { combineReducers } from 'redux';
-import header, { HeaderState } from './header';
+import { combineReducers } from "redux";
+import core, { CoreState } from "./core";
+import header, { HeaderState } from "./header";
+
+export { actions } from "./actions";
 
 export type RootState = {
-    // core: CoreState;
+    core: CoreState;
     header: HeaderState;
 };
 
 const rootReducer = combineReducers({
-    // core,
+    core: core.reducer,
     header: header.reducer,
 });
-
-export const headerAction = {
-    setMenu: header.actions.setMenu,
-};
 
 export default rootReducer;
