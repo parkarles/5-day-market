@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import palette from "../../lib/styles/palette";
@@ -24,7 +25,7 @@ function Items({ itemList, itemSize }: ItemProps) {
             {
                 itemList.map((item) => {
                     return (
-                        <Block key={item.id} size={itemSize} reverse={item.id % 2 !== 0}>
+                        <Block to={`/magazine/${item.id}`} key={item.id} size={itemSize} reverse={item.id % 2 !== 0}>
                             <ImageContainer size={itemSize}>
                                 <img className="gradient" src={hoverGradient} />
                                 <img className="product" src={item.image} />
@@ -54,6 +55,18 @@ const ImageContainer = styled.div<{ size: number }>`
         width: 100%;
     }
 
+`;
+
+const Block = styled(Link)<{ size: number, reverse: boolean }>`
+    display: flex;
+    flex-direction: ${({ reverse }) => reverse ? 'row-reverse' : 'row'}};
+    width: ${({ size }) => `${size * 2}px`}};
+    height: ${({ size }) => `${size}px`}};
+    margin: 0px auto;
+    // cursor: pointer;
+    text-decoration: none;
+
+
     & img.gradient {
         position: absolute;
         z-index: -1;
@@ -63,20 +76,11 @@ const ImageContainer = styled.div<{ size: number }>`
         transform: translateX(-50%) translateY(calc(-50% + 6rem));
         transition: transform 0.4s ease-out 0s, opacity 0.7s ease-out 0s;
     }
-    
+
     &:hover img.gradient {
         opacity: 1;
         transform: translateX(-50%) translateY(-50%);
     }
-`;
-
-const Block = styled.div<{ size: number, reverse: boolean }>`
-    display: flex;
-    flex-direction: ${({ reverse }) => reverse ? 'row-reverse' : 'row'}};
-    width: ${({ size }) => `${size * 2}px`}};
-    height: ${({ size }) => `${size}px`}};
-    margin: 0px auto;
-    cursor: pointer;
 `;
 
 

@@ -14,6 +14,7 @@ const palette = {
     /* ivory */
     ivory0: '#FDF7F0',
     ivory1: '#FDF1E3',
+    ivory2: '#FFFBF6',
     /* white */
     white0: '#FFFFFF',
     /* black */
