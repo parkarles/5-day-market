@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/5-day-market/static/css/main.a617e044.chunk.css",
-    "main.js": "/5-day-market/static/js/main.bed77e08.chunk.js",
-    "main.js.map": "/5-day-market/static/js/main.bed77e08.chunk.js.map",
+    "main.js": "/5-day-market/static/js/main.15fc8adb.chunk.js",
+    "main.js.map": "/5-day-market/static/js/main.15fc8adb.chunk.js.map",
     "runtime-main.js": "/5-day-market/static/js/runtime-main.794db01a.js",
     "runtime-main.js.map": "/5-day-market/static/js/runtime-main.794db01a.js.map",
     "static/js/2.88fbb115.chunk.js": "/5-day-market/static/js/2.88fbb115.chunk.js",
@@ -76,6 +76,6 @@
     "static/js/runtime-main.794db01a.js",
     "static/js/2.88fbb115.chunk.js",
     "static/css/main.a617e044.chunk.css",
-    "static/js/main.bed77e08.chunk.js"
+    "static/js/main.15fc8adb.chunk.js"
   ]
 }
