@@ -1,7 +1,31 @@
-export { default as broom } from './homeItem/broom.png';
-export { default as gat } from './homeItem/gat.png';
-export { default as homi } from './homeItem/homi.png';
-export { default as meadeup } from './homeItem/meadeup.png';
-export { default as onggi } from './homeItem/onggi.png';
-export { default as tal } from './homeItem/tal.png';
+export { default as broomImage } from './homeItem/broom.png';
+export { default as gatImage } from './homeItem/gat.png';
+export { default as homiImage } from './homeItem/homi.png';
+export { default as maedeupImage } from './homeItem/maedeup.png';
+export { default as onggiImage } from './homeItem/onggi.png';
+export { default as talImage } from './homeItem/tal.png';
 export { default as hoverGradient } from './homeItem/hover_gradient.png';
+
+export { default as meadeup1 } from './homeItem/meadeup_1.png';
+export { default as meadeup2 } from './homeItem/meadeup_2.png';
+export { default as meadeup3 } from './homeItem/meadeup_3.png';
+export { default as meadeup4 } from './homeItem/meadeup_4.png';
+export { default as meadeup5 } from './homeItem/meadeup_5.png';
+
+export { default as broomBitjaru1 } from './marketItem/broom_bitjaru_1.png';
+export { default as broomBitjaru2 } from './marketItem/broom_bitjaru_2.png';
+export { default as oimuIncenseWinter } from './marketItem/oimu_incense_stick_winter.png';
+export { default as oimuIncenseSummer } from './marketItem/oimu_incense_stick_summer.png';
+export { default as oimuIncenseHolder } from './marketItem/oimu_incense_holder.png';
+export { default as moonJar } from './marketItem/moon_jar.png';
+export { default as heukjaVase } from './marketItem/heukja_vase.png';
+export { default as horiVaseBlue } from './marketItem/hori_flower_vase_blue.png';
+export { default as horiVaseGrey } from './marketItem/hori_flower_vase_blue_grey.png';
+export { default as bojagi } from './marketItem/bojagi.png';
+export { default as baeraeFlower } from './marketItem/baerae_flower.png';
+export { default as malcongNorigae } from './marketItem/malcong_norigae.png';
+export { default as poster } from './marketItem/poster.png';
+export { default as handCarvedBoard } from './marketItem/hand_carved_wooden_board.png';
+export { default as mamich } from './marketItem/mamich.png';
+export { default as tukbaegi } from './marketItem/tukbaegi.png';
+export { default as bangjja } from './marketItem/bangjja.png';

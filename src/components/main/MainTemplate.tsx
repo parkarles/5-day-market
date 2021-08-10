@@ -12,6 +12,9 @@ const BackgroundStyle = createGlobalStyle`
   h1, h2, h3, h4, h5, p {
     font-family: 'Roboto';
   }
+  img {
+    max-width: 100%;
+  }
 `;
 
 export type MainTemplateProps = {

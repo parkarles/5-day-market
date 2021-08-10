@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 // import { Link } from "react-router-dom";
 
-import { ImageLogo, FacebookIcon, InstaIcon, TwitterIcon, YoutubeIcon } from "../static/svg";
-import palette from "../lib/styles/palette";
+import { ImageLogo, FacebookIcon, InstaIcon, TwitterIcon, YoutubeIcon } from "../../static/svg";
+import palette from "../../lib/styles/palette";
 
 const Footer = () => {
     return (

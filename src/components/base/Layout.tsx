@@ -40,11 +40,6 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
       <Header />
       {children}
       <Footer />
-      {/*   <Footer isXS={state.isXS} dispatch={dispatch} router={router} userInfo={state.userInfo} />
-        <Login isXS={state.isXS} openLoginPopup={state.openLoginPopup} dispatch={dispatch} />
-        <Alert isXS={state.isXS} isAlert={state.isAlert} dispatch={dispatch} />
-        <Loading isXS={state.isXS} isLoading={state.isLoading} dispatch={dispatch} />
-        <Menu isXS={state.isXS} router={router} openMenu={state.openMenu} isLogin={state.isLogin} dispatch={dispatch} inquiryUrl={state.inquiryUrl} /> */}
     </MainContext.Provider>
   );
 };

@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import { CartIcon, MyPageIcon } from "../static/svg";
-import palette from "../lib/styles/palette";
-import useHeader from "../lib/hooks/useHeader";
-import storage from "../lib/storage";
+import { CartIcon, MyPageIcon } from "../../static/svg";
+import palette from "../../lib/styles/palette";
+import useHeader from "../../lib/hooks/useHeader";
+import storage from "../../lib/storage";
 
 const Header = () => {
     const { menu, setMenu } = useHeader();

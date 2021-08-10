@@ -1,29 +1,25 @@
 import React from "react";
 import styled from "styled-components";
 
-import MainTemplate from "./main/MainTemplate";
-import Grid from "./main/ItemsGrid";
-import { MainLogo } from "../static/svg";
+import MainTemplate from "../main/MainTemplate";
+import Grid from "../main/ItemsGrid";
 
-import homeItemList from "../static/homeItemList";
-import palette from "../lib/styles/palette";
+import homeItemList from "../../static/homeItemList";
+import palette from "../../lib/styles/palette";
 
-import Items from "./Home/Items";
+import Items from "./Items";
 
-function MarketPage() {
+function HomePage() {
     const itemSize = 358;
 
     return (
         <MainTemplate>
-            <LogoContainer>
-                <MainLogo />
-            </LogoContainer>
             <ItemContainer>
                 <Grid size={itemSize}>
                     <Items itemList={homeItemList} itemSize={itemSize} />
                 </Grid>
             </ItemContainer>
-            <GradientBox>
+            <GradientBox> 
                 <p>Subscribe Now</p>
             </GradientBox>
         </MainTemplate>
@@ -32,18 +28,9 @@ function MarketPage() {
 
 const ItemContainer = styled.div`
     width: 100%; 
+    padding-top: 105px;
     position: relative;
     overflow: hidden;
-`;
-
-const LogoContainer = styled.div`
-    width: 100%;
-    height: 220px;
-    display: flex;
-    
-    & svg {
-        margin: auto;
-    }
 `;
 
 const GradientBox = styled.div`
@@ -63,4 +50,4 @@ const GradientBox = styled.div`
 `;
 
 
-export default MarketPage;
+export default HomePage;

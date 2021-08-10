@@ -15,7 +15,7 @@ class FallbackStorage {
 
     valid: boolean = checkLocalStorage();
 
-    setItem(key: string, value: any) {
+    setItem(key: string, value: unknown) {
         const string = JSON.stringify(value);
         if (this.valid) {
             localStorage.setItem(key, string);

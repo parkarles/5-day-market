@@ -1,11 +1,12 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import "./App.css";
-import ContextProvider from "./components/Layout";
+import ContextProvider from "./components/base/Layout";
 import { Helmet } from "react-helmet-async";
 
-import Home from "./components/Home";
-import Market from "./components/Market";
+import Home from "./components/home/HomePage";
+import Magzine from "./components/home/Magzine";
+import Market from "./components/market/MarketPage";
 
 const App: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const App: React.FC = () => {
       </Helmet>
         <Switch>
           <Route path="/" component={Home} exact />
+        <Route path="/magazine/:id" component={Magzine} />
           <Route path="/market" component={Market} />
           <Route path="/contact" component={Home} />
           <Route path="/about" component={Home} />
