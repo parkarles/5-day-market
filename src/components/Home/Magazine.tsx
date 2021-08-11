@@ -42,7 +42,7 @@ function MagazinePage({ match }: RouteComponentProps<MatchProps>) {
                             감사한 마음에 보답하기 위해서 정말 차근차근 열심히 준비하였습니다.
                         </p>
                     </FundingInfo>
-                    <FundingTab item={item.funding} />
+                    <FundingTab id={item.id} item={item.funding} />
                 </Grid>
             </MainContainer>
         </MainTemplate>

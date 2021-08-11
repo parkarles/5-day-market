@@ -3,12 +3,14 @@ import styled from "styled-components";
 import { ItemFunding } from "../../static/homeItemList";
 
 import palette from "../../lib/styles/palette";
+import { Link } from "react-router-dom";
 
 type FundingTabProps = {
+    id: number;
     item: ItemFunding;
 }
 
-function FundingTab({ item }: FundingTabProps) {
+function FundingTab({ id, item }: FundingTabProps) {
     // const [timeout, setTimeout] = useState(true);
     // const now = new Date();
     // const deadline = item.deadline.getTime() - now.getTime();
@@ -39,7 +41,7 @@ function FundingTab({ item }: FundingTabProps) {
                         <p className="highlight">{item.total.toLocaleString()} </p>
                     </Info>
                 </FundingInfo>
-                <FundingButton>
+                <FundingButton to={`/fund/${id}`}>
                     <p>후원하기</p>
                 </FundingButton>
             </Block>
@@ -76,9 +78,10 @@ const FundingInfo = styled.div`
     }
 `;
     
-const FundingButton = styled.div`
+const FundingButton = styled(Link)`
     width: 100%; max-width: 230px;
     height: 42px;
+    text-decoration: none;
     background: linear-gradient(123.23deg, #FFA600 10.51%, #FF4DB2 94.3%);
     border-radius: 4px;
     margin-top: 20px;

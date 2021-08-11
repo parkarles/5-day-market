@@ -11,6 +11,7 @@ const palette = {
     brown2: '#D7D5D2',
     brown3: '#807160',
     brown4: '#544434',
+    brown5: '#C6B39F',
     /* ivory */
     ivory0: '#FDF7F0',
     ivory1: '#FDF1E3',

@@ -9,7 +9,6 @@ type LayoutProps = {
 }
 
 function DetailLayout({item}: LayoutProps) {
-    // const { id } = useParams();
     return (
         <Block>
             <Title>
@@ -20,12 +19,7 @@ function DetailLayout({item}: LayoutProps) {
 
             <ProductInfo>
             <h3> { item.content.subTitle } </h3>
-                <p> 
-                    {item.content.productInfo}
-                    {/* {
-                        newlineText(item.content.productInfo)
-                    }  */}
-                </p>
+            <p> {item.content.productInfo} </p>
             </ProductInfo>
 
             <Gallery>
@@ -42,9 +36,9 @@ function DetailLayout({item}: LayoutProps) {
                         );
                     })
                 }
-            {
-                item.content.caption ? <p className="caption"> { item.content.caption } </p> : null
-            }
+                {
+                    item.content.caption ? <p className="caption"> { item.content.caption } </p> : null
+                }
             </Gallery>
         </Block>
     )

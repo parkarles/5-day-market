@@ -1,12 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { createStore } from "redux";
-import { RootState } from "./modules";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
-import rootReducer from "./modules";
+import rootReducer, { RootState } from "./modules";
 import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
 import reportWebVitals from "./reportWebVitals";
 import { HelmetProvider } from "react-helmet-async";
