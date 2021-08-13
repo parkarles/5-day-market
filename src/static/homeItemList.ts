@@ -8,14 +8,14 @@ import {
     gat1, gat2, gat3, gat4,
 } from "./image";
 
-export type ItemFunding = {
+export interface ItemFunding {
     master: string;
     sponsor: number;
     deadline: Date;
     total: number;
 }
 
-export type ItemContent = {
+export interface ItemContent {
     master: string;
     masterDesc: string;
     subTitle: string;
@@ -24,7 +24,7 @@ export type ItemContent = {
     caption?: string;
 };
 
-export type ItemType = {
+export interface ItemType {
     id: number;
     enTitle: string;
     title: string;

@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 
 import { CartIcon, MyPageIcon } from "../../static/svg";
-// import CartIcon from "../../static/svg/ic-cart.svg";
 import palette from "../../lib/styles/palette";
 import useHeader from "../../lib/hooks/useHeader";
 import storage from "../../lib/storage";
@@ -32,7 +31,7 @@ const Header = () => {
                     <ul>
                         {
                             listItems.map((item) => (
-                                <li className={item.title === menu ? "action" : undefined} key={item.title} onClick={() => setMenu(item.title)}>
+                                <li className={item.title === menu ? "action" : undefined} key={item.title} onClick={() => setMenu(item.title, true)}>
                                     <Link to={item.link}>
                                         {item.title}
                                     </Link>

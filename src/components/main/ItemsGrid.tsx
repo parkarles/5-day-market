@@ -2,12 +2,12 @@ import React from 'react';
 import styled from "styled-components";
 import palette from "../../lib/styles/palette";
 
-export type MainTemplateProps = {
+export interface MainTemplateProps {
     children: React.ReactNode;
     size: number;
 };
 
-export type BlockType = {
+export interface IBlock {
     size: number;
 };
 
@@ -20,7 +20,7 @@ function ItemsGrid({ children, size }: MainTemplateProps) {
     );
 }
 
-const Block = styled.div<BlockType>`
+const Block = styled.div<IBlock>`
     position: absolute;
     width: ${({ size }) => `calc(100% + ${size}px)`};
     left: 50%;

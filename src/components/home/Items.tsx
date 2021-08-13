@@ -6,7 +6,7 @@ import palette from "../../lib/styles/palette";
 
 import { hoverGradient } from "../../static/image";
 
-export type Item = {
+export interface Item {
     id: number;
     enTitle: string;
     title: string;
@@ -14,7 +14,7 @@ export type Item = {
     image: string;
 };
 
-export type ItemProps = {
+export interface ItemProps {
     itemList: Array<Item>;
     itemSize: number;
 };
@@ -25,7 +25,7 @@ function Items({ itemList, itemSize }: ItemProps) {
             {
                 itemList.map((item) => {
                     return (
-                        <Block to={`/magazine/${item.id}`} key={item.id} size={itemSize} reverse={item.id % 2 !== 0}>
+                        <Block to={`/magazine/${item.id}`} key={item.id} size={itemSize} reverse={item.id % 2}>
                             <ImageContainer size={itemSize}>
                                 <img className="gradient" src={hoverGradient} />
                                 <img className="product" src={item.image} />
@@ -57,9 +57,9 @@ const ImageContainer = styled.div<{ size: number }>`
 
 `;
 
-const Block = styled(Link)<{ size: number, reverse: boolean }>`
+const Block = styled(Link)<{ size: number, reverse: number }>`
     display: flex;
-    flex-direction: ${({ reverse }) => reverse ? 'row-reverse' : 'row'}};
+    flex-direction: ${({ reverse }) => reverse === 1 ? 'row-reverse' : 'row'};
     width: ${({ size }) => `${size * 2}px`}};
     height: ${({ size }) => `${size}px`}};
     margin: 0px auto;

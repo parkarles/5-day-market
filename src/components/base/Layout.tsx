@@ -1,8 +1,13 @@
 import React, { useState } from "react";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
+
+import rootReducer, { RootState } from "../../modules";
 import Header from "./Header";
 import Footer from "./Footer";
 
-export type ContextProviderProps = {
+interface ContextProviderProps {
     children: React.ReactNode;
 };
 
@@ -16,10 +21,23 @@ const MainContext = React.createContext<ContextValue>({
     set: () => { },
 });
 
+declare global {
+    interface Window {
+        __REDUX_STATE__: RootState;
+    }
+}
+
+const store = createStore(
+    rootReducer,
+    window.__REDUX_STATE__,
+    composeWithDevTools(),
+);
+
 const ContextProvider = ({ children }: ContextProviderProps) => {
     const [value, setValue] = useState(0);
 
     return (
+        <Provider store={store}>
         <MainContext.Provider
             value={{
                 value,
@@ -30,6 +48,7 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
             {children}
             <Footer />
         </MainContext.Provider>
+        </Provider>
     );
 };
 

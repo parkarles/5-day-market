@@ -5,6 +5,7 @@ import palette from "../../lib/styles/palette";
 const BackgroundStyle = createGlobalStyle`
   body {
     background: ${palette.ivory0};
+    margin: 0;
   }
   body * {
     box-sizing: border-box;
@@ -17,7 +18,7 @@ const BackgroundStyle = createGlobalStyle`
   }
 `;
 
-export type MainTemplateProps = {
+export interface MainTemplateProps {
     children: React.ReactNode;
 };
 

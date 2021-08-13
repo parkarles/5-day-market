@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import palette from "../../lib/styles/palette";
 
-export type Item = {
+export interface Item {
     id: number;
     image: string;
     enTitle: string;
@@ -12,7 +12,7 @@ export type Item = {
     desc: string;
 };
 
-export type ItemProps = {
+export interface ItemProps {
     itemList: Array<Array<Item>>;
     itemSize: number;
 };

@@ -1,24 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-import { RouteComponentProps, useHistory } from "gatsby";
+import { navigate } from "gatsby";
 
 import MainTemplate from "../main/MainTemplate";
 
 import homeItemList, { ItemType } from "../../static/homeItemList";
 import palette from "../../lib/styles/palette";
 
-export type MatchProps = {
+export interface IProps {
     id: string
 };
 
-function FundingPage({ match }: RouteComponentProps<MatchProps>) {
-    const id = +match.params.id;
-    const item: ItemType = homeItemList[id];
-    const history = useHistory();
+function FundingPage({ id }: IProps) {
+    const item: ItemType = homeItemList[+id];
 
     if (item === undefined) {
         window.alert('유효하지 않은 접근입니다.');
-        history.goBack();
+        navigate(-1);
     }
 
     return (

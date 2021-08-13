@@ -3,7 +3,7 @@ import header, { HeaderState } from "./header";
 
 export { actions } from "./actions";
 
-export type RootState = {
+export interface RootState {
     // core: CoreState;
     header: HeaderState;
 };

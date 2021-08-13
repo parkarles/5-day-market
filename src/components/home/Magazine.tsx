@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { RouteComponentProps, useHistory } from "gatsby";
+import { navigate } from "gatsby";
 
 import MainTemplate from "../main/MainTemplate";
 
@@ -9,18 +9,16 @@ import palette from "../../lib/styles/palette";
 import DetailLayout from "./DetailLayout";
 import FundingTab from "./FundingTab";
 
-export type MatchProps = { 
-    id: string
-};
+interface IProp {
+    id: string;
+}
 
-function MagazinePage({ match }: RouteComponentProps<MatchProps>) {
-    const id = +match.params.id;
-    const item: ItemType = homeItemList[id];
-    const history = useHistory();
+function MagazinePage({ id }: IProp) {
+    const item: ItemType = homeItemList[+id];
     
     if (item === undefined) {
         window.alert('유효하지 않은 접근입니다.');
-        history.goBack();
+        navigate(-1);
     }
 
     return (

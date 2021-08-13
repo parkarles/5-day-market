@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import { ImageLogo, FacebookIcon, InstaIcon, TwitterIcon, YoutubeIcon } from "../../static/svg";
+import { ImageLogo, 
+    // FacebookIcon, InstaIcon, TwitterIcon, YoutubeIcon 
+} from "../../static/svg";
 import palette from "../../lib/styles/palette";
 
 const Footer = () => {
@@ -10,10 +12,10 @@ const Footer = () => {
             <Inner>
                 <ImageLogo />
                 <SocialIcons>
-                    <InstaIcon />
+                    {/* <InstaIcon />
                     <FacebookIcon />
                     <TwitterIcon />
-                    <YoutubeIcon />
+                    <YoutubeIcon /> */}
                 </SocialIcons>
                 <Info>
                     <p>

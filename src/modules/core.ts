@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-export type CoreState = {
+export interface CoreState {
     size: string;
     popup: {
         title: string | undefined;
