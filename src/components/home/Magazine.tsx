@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { RouteComponentProps, useHistory } from "gatsby";
 
 import MainTemplate from "../main/MainTemplate";
 
@@ -13,14 +12,15 @@ export type MatchProps = {
     id: string
 };
 
-function MagazinePage({ match }: RouteComponentProps<MatchProps>) {
-    const id = +match.params.id;
-    const item: ItemType = homeItemList[id];
-    const history = useHistory();
+function MagazinePage({ id = "0" }: MatchProps) {
+    // const id = +match.params.id;
+    console.log('id : ', id);
+    const item: ItemType = homeItemList[+id];
+    // const history = useHistory();
     
     if (item === undefined) {
         window.alert('유효하지 않은 접근입니다.');
-        history.goBack();
+        // history.goBack();
     }
 
     return (

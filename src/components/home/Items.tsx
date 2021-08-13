@@ -59,7 +59,7 @@ const ImageContainer = styled.div<{ size: number }>`
 
 const Block = styled(Link)<{ size: number, reverse: boolean }>`
     display: flex;
-    flex-direction: ${({ reverse }) => reverse ? 'row-reverse' : 'row'}};
+    flex-direction: ${({ reverse }) => reverse ? 'row-reverse' : 'row'};
     width: ${({ size }) => `${size * 2}px`}};
     height: ${({ size }) => `${size}px`}};
     margin: 0px auto;
