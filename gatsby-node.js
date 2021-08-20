@@ -12,8 +12,8 @@ exports.onCreatePage = async ({
     createPage(page)
   }
 
-    if (page.path.match(/^\/fund/)) {
-      page.matchPath = "/fund/:id"
-      createPage(page)
-    }
+  if (page.path.match(/^\/fund/)) {
+    page.matchPath = "/fund/:id"
+    createPage(page)
+  }
 }
