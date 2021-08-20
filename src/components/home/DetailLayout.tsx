@@ -9,10 +9,11 @@ type LayoutProps = {
 }
 
 function DetailLayout({item}: LayoutProps) {
+    const isBrowser = typeof window !== "undefined";
     return (
         <Block>
             <Title>
-                <h2> { item.enTitle.toUpperCase() } </h2>
+                <h2> {isBrowser ? item.enTitle.toUpperCase() : item.enTitle } </h2>
                 <h4> { item.content.master }</h4>
                 <p> { item.content.masterDesc }</p>
             </Title>

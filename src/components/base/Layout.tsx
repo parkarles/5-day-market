@@ -7,6 +7,21 @@ import rootReducer, { RootState } from "../../modules";
 import Header from "./Header";
 import Footer from "./Footer";
 
+const isBrowser = typeof window !== "undefined";
+let store = createStore(
+    rootReducer,
+    composeWithDevTools(),
+);
+
+if (isBrowser) {
+    document.cookie = "cross-site-cookie=bar; SameSite=None; Secure";
+    store = createStore(
+        rootReducer,
+        window.__REDUX_STATE__,
+        composeWithDevTools(),
+    );
+}
+
 interface ContextProviderProps {
     children: React.ReactNode;
 };
@@ -26,12 +41,6 @@ declare global {
         __REDUX_STATE__: RootState;
     }
 }
-
-const store = createStore(
-    rootReducer,
-    window.__REDUX_STATE__,
-    composeWithDevTools(),
-);
 
 const ContextProvider = ({ children }: ContextProviderProps) => {
     const [value, setValue] = useState(0);

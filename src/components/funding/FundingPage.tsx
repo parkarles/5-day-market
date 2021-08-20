@@ -11,10 +11,10 @@ export interface IProps {
     id: string
 };
 
-function FundingPage({ id }: IProps) {
+function FundingPage({ id = "0" }: IProps) {
     const item: ItemType = homeItemList[+id];
 
-    if (item === undefined) {
+    if (item === undefined && typeof window !== "undefined") {
         window.alert('유효하지 않은 접근입니다.');
         navigate(-1);
     }

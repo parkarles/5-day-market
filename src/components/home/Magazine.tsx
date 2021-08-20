@@ -13,10 +13,10 @@ interface IProp {
     id: string;
 }
 
-function MagazinePage({ id }: IProp) {
+function MagazinePage({ id = "0" }: IProp) {
     const item: ItemType = homeItemList[+id];
     
-    if (item === undefined) {
+    if (item === undefined && typeof window !== "undefined") {
         window.alert('유효하지 않은 접근입니다.');
         navigate(-1);
     }
@@ -36,7 +36,7 @@ function MagazinePage({ id }: IProp) {
                             과정을 준비하였습니다.
                             <br/><br/>
                             전통에 관심을,<br />
-                            그중에서도 특히 {item ? item.title : null}에 관심을 가져주셔서 감사합니다.<br />
+                            그중에서도 특히 {item.title}에 관심을 가져주셔서 감사합니다.<br />
                             감사한 마음에 보답하기 위해서 정말 차근차근 열심히 준비하였습니다.
                         </p>
                     </FundingInfo>
