@@ -2,18 +2,17 @@ import * as React from "react";
 import { PageProps } from "gatsby";
 
 import ContextProvider from "../../components/base/Layout";
-import Market from "../../components/market/MarketPage";
+import NotFiveDay from "../../components/market/NotFiveDay";
 
 interface IProps extends PageProps {
-  // id: string;
 }
 
-const IndexPage = ({  }: IProps) => {
-  return (
-    <ContextProvider>
-      <Market />
-    </ContextProvider>
-  )
+const IndexPage = ({ }: IProps) => {
+    return (
+        <ContextProvider>
+            <NotFiveDay />
+        </ContextProvider>
+    )
 }
 
 export default IndexPage;

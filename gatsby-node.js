@@ -11,6 +11,11 @@ exports.onCreatePage = async ({
     page.matchPath = "/magazine/:id"
     createPage(page)
   }
+  
+  if (page.path.match(/^\/market\/.+/g)) {
+    page.matchPath = "/market/:id"
+    createPage(page)
+  }
 
   if (page.path.match(/^\/fund/)) {
     page.matchPath = "/fund/:id"

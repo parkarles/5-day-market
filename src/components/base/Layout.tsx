@@ -45,8 +45,6 @@ declare global {
 }
 
 const ContextProvider = ({ children }: ContextProviderProps) => {
-
-
     const [value, setValue] = useState(0);
 
     return (

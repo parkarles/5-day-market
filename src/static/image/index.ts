@@ -39,20 +39,85 @@ export { default as gat2 } from './homeItem/gat_2.png';
 export { default as gat3 } from './homeItem/gat_3.png';
 export { default as gat4 } from './homeItem/gat_4.png';
 
-export { default as broomBitjaru1 } from './marketItem/broom_bitjaru_1.png';
-export { default as broomBitjaru2 } from './marketItem/broom_bitjaru_2.png';
-export { default as oimuIncenseWinter } from './marketItem/oimu_incense_stick_winter.png';
-export { default as oimuIncenseSummer } from './marketItem/oimu_incense_stick_summer.png';
-export { default as oimuIncenseHolder } from './marketItem/oimu_incense_holder.png';
-export { default as moonJar } from './marketItem/moon_jar.png';
-export { default as heukjaVase } from './marketItem/heukja_vase.png';
-export { default as horiVaseBlue } from './marketItem/hori_flower_vase_blue.png';
-export { default as horiVaseGrey } from './marketItem/hori_flower_vase_blue_grey.png';
-export { default as bojagi } from './marketItem/bojagi.png';
-export { default as baeraeFlower } from './marketItem/baerae_flower.png';
-export { default as malcongNorigae } from './marketItem/malcong_norigae.png';
-export { default as poster } from './marketItem/poster.png';
-export { default as handCarvedBoard } from './marketItem/hand_carved_wooden_board.png';
-export { default as mamich } from './marketItem/mamich.png';
-export { default as tukbaegi } from './marketItem/tukbaegi.png';
-export { default as bangjja } from './marketItem/bangjja.png';
+export { default as broomBlack1 } from './marketDetail/broom_black_1.png';
+export { default as broomBlack2 } from './marketDetail/broom_black_2.png';
+export { default as broomBlack3 } from './marketDetail/broom_black_3.png';
+
+export { default as broomGray1 } from './marketDetail/broom_gray_1.png';
+export { default as broomGray2 } from './marketDetail/broom_gray_2.png';
+export { default as broomGray3 } from './marketDetail/broom_gray_3.png';
+
+export { default as incenseWinter1 } from './marketDetail/incense_winter_img1.png';
+export { default as incenseWinter2 } from './marketDetail/incense_winter_img2.png';
+export { default as incenseWinter3 } from './marketDetail/incense_winter_img3.png';
+export { default as incenseWinter4 } from './marketDetail/incense_winter_img4.png';
+
+export { default as incenseSummer1 } from './marketDetail/incense_summer_img1.png';
+export { default as incenseSummer2 } from './marketDetail/incense_summer_img2.png';
+export { default as incenseSummer3 } from './marketDetail/incense_summer_img3.png';
+export { default as incenseSummer4 } from './marketDetail/incense_summer_img4.png';
+
+export { default as incenseHolder1 } from './marketDetail/incense_holder_img1.png';
+export { default as incenseHolder2 } from './marketDetail/incense_holder_img2.png';
+export { default as incenseHolder3 } from './marketDetail/incense_holder_img3.png';
+export { default as incenseHolder4 } from './marketDetail/incense_holder_img4.png';
+
+export { default as moonjar1 } from './marketDetail/moonjar_1.png';
+export { default as moonjar2 } from './marketDetail/moonjar_2.png';
+export { default as moonjar3 } from './marketDetail/moonjar_3.png';
+export { default as moonjar4 } from './marketDetail/moonjar_4.png';
+
+export { default as heukjavase1 } from './marketDetail/heukjavase_1.png';
+export { default as heukjavase2 } from './marketDetail/heukjavase_2.png';
+export { default as heukjavase3 } from './marketDetail/heukjavase_3.png';
+export { default as heukjavase4 } from './marketDetail/heukjavase_4.png';
+
+export { default as horivaseBlue1 } from './marketDetail/horivase_Blue_1.png';
+export { default as horivaseBlue2 } from './marketDetail/horivase_Blue_2.png';
+export { default as horivaseBlue3 } from './marketDetail/horivase_Blue_3.png';
+export { default as horivaseBlue4 } from './marketDetail/horivase_Blue_4.png';
+
+export { default as horivaseBrown1 } from './marketDetail/horivase_Brown_1.png';
+export { default as horivaseBrown2 } from './marketDetail/horivase_Brown_2.png';
+export { default as horivaseBrown3 } from './marketDetail/horivase_Brown_3.png';
+export { default as horivaseBrown4 } from './marketDetail/horivase_Brown_4.png';
+
+export { default as bojagibag1 } from './marketDetail/bojagibag_1.png';
+export { default as bojagibag2 } from './marketDetail/bojagibag_2.png';
+export { default as bojagibag3 } from './marketDetail/bojagibag_3.png';
+export { default as bojagibag4 } from './marketDetail/bojagibag_4.png';
+
+export { default as baeraevase1 } from './marketDetail/baeraevase_1.png';
+export { default as baeraevase2 } from './marketDetail/baeraevase_2.png';
+export { default as baeraevase3 } from './marketDetail/baeraevase_3.png';
+export { default as baeraevase4 } from './marketDetail/baeraevase_4.png';
+
+export { default as norigae1 } from './marketDetail/norigae_1.png';
+export { default as norigae2 } from './marketDetail/norigae_2.png';
+export { default as norigae3 } from './marketDetail/norigae_3.png';
+export { default as norigae4 } from './marketDetail/norigae_4.png';
+
+export { default as scrollPoster1 } from './marketDetail/scroll_poster_1.png';
+export { default as scrollPoster2 } from './marketDetail/scroll_poster_2.png';
+export { default as scrollPoster3 } from './marketDetail/scroll_poster_3.png';
+export { default as scrollPoster4 } from './marketDetail/scroll_poster_4.png';
+
+export { default as woodenBoard1 } from './marketDetail/wooden_board_1.png';
+export { default as woodenBoard2 } from './marketDetail/wooden_board_2.png';
+export { default as woodenBoard3 } from './marketDetail/wooden_board_3.png';
+export { default as woodenBoard4 } from './marketDetail/wooden_board_4.png';
+
+export { default as subiMamich1 } from './marketDetail/subi_mamich_1.png';
+export { default as subiMamich2 } from './marketDetail/subi_mamich_2.png';
+export { default as subiMamich3 } from './marketDetail/subi_mamich_3.png';
+export { default as subiMamich4 } from './marketDetail/subi_mamich_4.png';
+
+export { default as tukbaegi1 } from './marketDetail/tukbaegi_1.png';
+export { default as tukbaegi2 } from './marketDetail/tukbaegi_2.png';
+export { default as tukbaegi3 } from './marketDetail/tukbaegi_3.png';
+export { default as tukbaegi4 } from './marketDetail/tukbaegi_4.png';
+
+export { default as bangjja1 } from './marketDetail/bangjja_1.png';
+export { default as bangjja2 } from './marketDetail/bangjja_2.png';
+export { default as bangjja3 } from './marketDetail/bangjja_3.png';
+export { default as bangjja4 } from './marketDetail/bangjja_4.png';

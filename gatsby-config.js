@@ -40,5 +40,7 @@ module.exports = {
         allExtensions: true,
       },
     },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
   ],
 };

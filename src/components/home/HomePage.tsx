@@ -7,7 +7,7 @@ import Grid from "../main/ItemsGrid";
 
 import homeItemList from "../../static/homeItemList";
 import palette from "../../lib/styles/palette";
-
+import { HomeLogo } from "../../static/svg";
 import Items from "./Items";
 
 function HomePage() {
@@ -15,11 +15,6 @@ function HomePage() {
     const data = useStaticQuery(graphql`
         query {
             logoImage: file(name: {eq: "home_image"}) {
-                id
-                publicURL
-            }
-            mainLogo: file(name: {eq: "main_logo"}) {
-                id
                 publicURL
             }
         }
@@ -31,7 +26,7 @@ function HomePage() {
             <InfoWrapper>
                 <InfoContainer img={data.logoImage.publicURL}>
                     <div style={{marginLeft: '60px'}}>
-                        <img src={data.mainLogo.publicURL} />
+                        <HomeLogo />
                         <h3>
                             Meet traditional products with Korea's unique atmosphere and a long time of craftsmen.
                         </h3>
@@ -43,7 +38,6 @@ function HomePage() {
                 </InfoContainer>
             </InfoWrapper>
             <ItemContainer>
-                
                 <Grid size={itemSize}>
                     <Items itemList={homeItemList} itemSize={itemSize} />
                 </Grid>
