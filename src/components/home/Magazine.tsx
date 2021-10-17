@@ -71,7 +71,7 @@ const Grid = styled.div`
 const VideoContainer = styled.div<{src? : string}>`
     width: 100%;
     height: 593px;
-    background-color: ${palette.ivory0};
+    background-color: ${palette.brown2};
     ${({ src }) => src ? 
     `
         background-image: url(${src});
