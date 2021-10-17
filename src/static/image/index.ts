@@ -17,12 +17,14 @@ export { default as hahoemask2 } from './homeItem/hahoe_mask_2.png';
 export { default as hahoemask3 } from './homeItem/hahoe_mask_3.png';
 export { default as hahoemask4 } from './homeItem/hahoe_mask_4.png';
 export { default as hahoemask5 } from './homeItem/hahoe_mask_5.png';
+export { default as hahoemaskBanner } from './homeItem/hahoe_mask_banner.png';
 
 export { default as broom1 } from './homeItem/broom_1.png';
 export { default as broom2 } from './homeItem/broom_2.png';
 export { default as broom3 } from './homeItem/broom_3.png';
 export { default as broom4 } from './homeItem/broom_4.png';
 export { default as broom5 } from './homeItem/broom_5.png';
+export { default as broomBanner } from './homeItem/broom_banner.png';
 
 export { default as onggi1 } from './homeItem/onggi_1.png';
 export { default as onggi2 } from './homeItem/onggi_2.png';

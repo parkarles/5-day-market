@@ -40,6 +40,8 @@ const Header = () => {
                         }
                     </ul>
                 </Menu>
+            </Inner>
+            <Inner>
                 <UserMenu>
                     <CartIcon />
                     <MyPageIcon />
@@ -50,20 +52,20 @@ const Header = () => {
 }
 
 const Block = styled.div`
-  height: 13rem;
-  position: fixed;
-  width: 100%;
+//   height: 13rem;
+  position: absolute;
   z-index: 10;
 `;
 
 const Inner = styled.div`
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
     padding: 30px;
 `;
 
 const Menu = styled.div`
     max-width: 400px;
+    position: fixed;
     ul {
         margin: 0px;
         padding: 0px;
@@ -84,6 +86,9 @@ const Menu = styled.div`
 `;
 
 const UserMenu = styled.div`
+    top:0; right: 0;
+    padding: 30px;
+    position: fixed;
     & img:first-child { 
         margin-right: 1rem;
     }

@@ -24,7 +24,12 @@ function MagazinePage({ id = "0" }: IProp) {
     return (
         <MainTemplate>
             <GradientBox />
-            <VideoContainer />
+            {
+                !item.banner ? 
+                    <VideoContainer /> :
+                    <VideoContainer src={item.banner} />
+
+            }
             <MainContainer>
                 <Grid>
                     <DetailLayout item={item} />
@@ -63,10 +68,18 @@ const Grid = styled.div`
     border-right: 1px solid ${palette.brown2};
 `;
 
-const VideoContainer = styled.div`
+const VideoContainer = styled.div<{src? : string}>`
     width: 100%;
     height: 593px;
-    background-color: ${palette.brown2};
+    background-color: ${palette.ivory0};
+    ${({ src }) => src ? 
+    `
+        background-image: url(${src});
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    `
+    : null}
 `;
 
 const FundingInfo = styled.div`

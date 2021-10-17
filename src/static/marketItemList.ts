@@ -181,7 +181,7 @@ const Items: Array<Array<ItemType>> = [
         enTitle: "Hohodang_ bojagi ecobag",
         price: 30.00,
         content: {
-            master: "HOHODANG (호호당 ",
+            master: "HOHODANG (호호당)",
             subEnTitle: "호호당의 에코 양단  ",
             subTitle: "BOJAGI ECO BAG",
             productInfo: `고래, 바다거북 그리고 나 ‘Whale, Green Turtle and me’\n고래, 바다거북 그리고 사람이 함께 어울려 살아가는 모습이 담긴\n환경 친화적인 재생 섬유를 통해 자연을 벗 삼아 살며 쉽사리 해하지 않았던\n옛 선조들의 태도에 한 발짝 다가서고자 합니다.\nSymbols : Whale, Green Turtle, human being from\n\n *Bangudae petroglyphs (반구대 암각화)\n반구대 암각화는 한국의 국보 제285호로 울산에 있는 대곡천 중부류 절벽에 위치한 \n세계에서 가장 오래된 바위 그림입니다.\n\n보자기 BOJAGI\n예로부터 한국에서는 좋은 날, 귀한 분을 위해 준비한 선물은 보자기로 감싸 선물했습니다. \n그때의 보자기는 새겨진 문양, 글귀, 색상 하나에도 의미가 담겨 있었습니다.\n\n오래 전부터 우리의 삶에 기록되어 온 ‘버려지지 않는 포장재‘ 보자기는 우리의 자랑스러운 문화유산 입니다.`,

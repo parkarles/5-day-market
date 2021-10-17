@@ -1,8 +1,8 @@
 import { talImage, broomImage, maedeupImage, homiImage, onggiImage, gatImage } from "./image";
 import { 
     maedeup1, maedeup2, maedeup3, maedeup4, maedeup5,
-    hahoemask1, hahoemask2, hahoemask3, hahoemask4, hahoemask5,
-    broom1, broom2, broom3, broom4, broom5,
+    hahoemask1, hahoemask2, hahoemask3, hahoemask4, hahoemask5, hahoemaskBanner,
+    broom1, broom2, broom3, broom4, broom5, broomBanner,
     onggi1, onggi2, onggi3, onggi4,
     homi1, homi2, homi3, homi4,
     gat1, gat2, gat3, gat4,
@@ -26,6 +26,7 @@ export interface ItemContent {
 
 export interface ItemType {
     id: number;
+    banner?: string;
     enTitle: string;
     title: string;
     desc: string;
@@ -67,6 +68,7 @@ const Items: Array<ItemType> = [
         id: 1,
         image: talImage,
         title: "한국 화회탈",
+        banner: hahoemaskBanner,
         enTitle: "Hahoe Mask",
         desc: "Korean Traditional  masks or tal.",
         content: {
@@ -95,6 +97,7 @@ const Items: Array<ItemType> = [
         id: 2,
         image: broomImage,
         title: "빗자루",
+        banner: broomBanner,
         enTitle: "BROOM",
         desc: "Korean traditional broom",
         content: {
