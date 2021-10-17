@@ -13,7 +13,6 @@ type LayoutProps = {
 
 
 function Detail({ id }: LayoutProps) {
-
     const itemList = marketItemList.reduce(function (acc, cur) {
         return acc.concat(cur);
     });
