@@ -5,16 +5,18 @@ import palette from "../../lib/styles/palette";
 export interface MainTemplateProps {
     children: React.ReactNode;
     size: number;
+    gcolor?: string;
 };
 
 export interface IBlock {
     size: number;
+    gcolor: string;
 };
 
-function ItemsGrid({ children, size }: MainTemplateProps) {
+function ItemsGrid({ children, size, gcolor = palette.white0_p50 }: MainTemplateProps) {
     return (
         <>
-            <Block size={size} />
+            <Block size={size} gcolor={gcolor} />
             <>{children}</>
         </>
     );
@@ -29,8 +31,10 @@ const Block = styled.div<IBlock>`
     background-position: top center;
     background-size: ${({ size }) => `${size}px ${size}px;`}
     background-image:
-        linear-gradient(${palette.brown2} .1em, transparent .1em),
-        linear-gradient(90deg, ${palette.brown2} .1em, transparent .1em);
+    ${({ gcolor }) => `
+        linear-gradient(${gcolor} .1em, transparent .1em),
+        linear-gradient(90deg, ${gcolor} .1em, transparent .1em);
+        `};
     background-color: transparent;
     z-index: -1;
 `;

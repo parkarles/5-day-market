@@ -1,14 +1,50 @@
 import { broomBitjaru1, broomBitjaru2, oimuIncenseWinter, oimuIncenseSummer, oimuIncenseHolder, moonJar, heukjaVase, horiVaseBlue, horiVaseGrey, bojagi, baeraeFlower, malcongNorigae, poster, handCarvedBoard, mamich, tukbaegi, bangjja } from "./image";
+import {
+    maedeup1, maedeup2, maedeup3
+} from "./image";
 
 export default [
     [{
         id: 1,
         image: broomBitjaru1,
-        title: "Mini Broom Bitjaru",
-        enTitle: "Mini Broom Bitjaru",
+        title: "광덕 미니 빗자루",
+        enTitle: "MINI BROOM BITJARU  - Black",
+        desc: "이동균 공예사의  미니 빗자루",
+        provider: "광덕 빗자루 공예사 이동균",
         price: 45.00,
-        desc: ""
-    },
+        content: {
+            master: "매듭장인, 김은영",
+            masterDesc: "무형문화재 제 13호 매듭장, 김은영",
+            subTitle: "조화와 완결의 미학, 매듭",
+            productInfo: `Hand crafted by Dong Kyun Lee in Jaecheon, South Korea \n\n
+                        Dimensions(approx.) ~9.5 inch\n\n
+                        Colors and length can be slightly different from the pictures.`,
+            productImages: [
+                [maedeup1, maedeup2],
+                [maedeup3]
+            ]
+        },
+    }, {
+            id: 2,
+            image: broomBitjaru2,
+            title: "광덕 미니 빗자루",
+            enTitle: "MINI BROOM BITJARU  - Black",
+            desc: "이동균 공예사의  미니 빗자루",
+            provider: "광덕 빗자루 공예사 이동균",
+            price: 45.00,
+            content: {
+                master: "매듭장인, 김은영",
+                masterDesc: "무형문화재 제 13호 매듭장, 김은영",
+                subTitle: "조화와 완결의 미학, 매듭",
+                productInfo: `Hand crafted by Dong Kyun Lee in Jaecheon, South Korea \n\n
+                        Dimensions(approx.) ~9.5 inch\n\n
+                        Colors and length can be slightly different from the pictures.`,
+                productImages: [
+                    [maedeup1, maedeup2],
+                    [maedeup3]
+                ]
+            },
+        },
     {
         id: 2,
         image: broomBitjaru2,

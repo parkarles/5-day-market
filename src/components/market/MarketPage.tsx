@@ -8,6 +8,7 @@ import { MainLogo } from "../../static/svg";
 import marketItemList from "../../static/marketItemList";
 
 import Items from "./Items";
+import palette from "../../lib/styles/palette";
 
 function MarketPage() {
     const itemSize = 358;
@@ -18,7 +19,7 @@ function MarketPage() {
                 <MainLogo />
             </LogoContainer>
             <ItemContainer>
-                <Grid size={itemSize}>
+                <Grid size={itemSize} gcolor={palette.brown2}>
                     <Items itemList={marketItemList} itemSize={itemSize} />
                 </Grid>
             </ItemContainer>

@@ -8,6 +8,8 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 const isBrowser = typeof window !== "undefined";
+const isMobile = isBrowser ? window.matchMedia("only screen and (max-width: 760px)").matches : true;
+
 let store = createStore(
     rootReducer,
     composeWithDevTools(),
@@ -43,6 +45,8 @@ declare global {
 }
 
 const ContextProvider = ({ children }: ContextProviderProps) => {
+
+
     const [value, setValue] = useState(0);
 
     return (

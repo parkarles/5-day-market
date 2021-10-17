@@ -17,6 +17,22 @@ module.exports = {
       __key: "pages",
     }, 
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "image",
+        path: "./src/static/image",
+      },
+      __key: "image",
+    }, 
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "svg",
+        path: "./src/static/svg",
+      },
+      __key: "svg",
+    }, 
+    {
       resolve: `gatsby-plugin-typescript`,
       options: {
         isTSX: true,
