@@ -16,7 +16,7 @@ function Detail({ id }: LayoutProps) {
     const itemList = marketItemList.reduce(function (acc, cur) {
         return acc.concat(cur);
     });
-    const item: ItemType = itemList[+id];
+    const item: ItemType = itemList[+id-1];
 
     // if (item === undefined && typeof window !== "undefined") {
     //     window.alert('유효하지 않은 접근입니다.');

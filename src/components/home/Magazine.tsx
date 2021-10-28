@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { navigate } from "gatsby";
+// import ReactPlayer from 'react-player';
 
 import MainTemplate from "../main/MainTemplate";
 
@@ -27,7 +28,20 @@ function MagazinePage({ id = "0" }: IProp) {
             {
                 !item.banner ? 
                     <VideoContainer /> :
-                    <VideoContainer src={item.banner} />
+                        item.bannerType === 'video' ?
+                            <VideoContainer>
+                                <div className="abso" />
+                            <iframe width="100%" height="100%" src={item.banner +"?controls=0&autoplay=1&autohide=1&modestbranding=1&fs=0&loop=1&rel=0"} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            {/* <ReactPlayer url={item.banner} muted playing={true} width={"100%"} height={"100%"}/> */}
+                            </VideoContainer>
+                            // <video muted autoPlay loop>
+                            //     <source src={item.banner} type="video/mp4" />
+                            //     <strong>Your browser does not support the video tag.</strong>
+                            // </video>
+                            :
+                            <VideoContainer>
+                                <img src={item.banner} />
+                            </VideoContainer>
 
             }
             <MainContainer>
@@ -69,18 +83,37 @@ const Grid = styled.div`
 `;
 
 const VideoContainer = styled.div<{src? : string}>`
-    width: 100%;
+    width: 100%; height: 100%;
     height: 593px;
+    position: relative;
     background-color: ${palette.brown2};
-    ${({ src }) => src ? 
-    `
-        background-image: url(${src});
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    `
-    : null}
-`;
+    & > * {
+        position: absolute;
+        width: 100%;
+        opacity: .5;
+    }
+    & div.abso {
+        width: 100%; height: 100%;
+        position: absolute; top: 0; left: 0;
+        z-index:1;
+    }
+    iframe {
+        z-index: 0;
+        .ytp-chrome-top, .ytp-gradient-top, .ytp-show-cards-title, .ytp-share-button, ytp-chrome-bottom{
+            opacity: 0 !important;
+            display: none !important;
+            left: 3012px !important;
+        }
+    }
+    `;
+    // ${({ src }) => src ? 
+    // `
+    //     background-image: url(${src});
+    //     background-size: cover;
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    // `
+    // : null}
 
 const FundingInfo = styled.div`
     text-align: center;

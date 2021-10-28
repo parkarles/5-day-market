@@ -33,7 +33,7 @@ function HomePage() {
                         <h4>
                             한국의 고유한 정취와 장인의 오랜시간 정성이 깃든 전통제품들을 만나보세요.
                         </h4>
-                        <Button>Get Start</Button>
+                        {/* <Button>Get Start</Button> */}
                     </div>
                 </InfoContainer>
             </InfoWrapper>
@@ -43,7 +43,7 @@ function HomePage() {
                 </Grid>
             </ItemContainer>
             <GradientBox> 
-                <p>Subscribe Now</p>
+                <p>구독하기 </p>
             </GradientBox>
            
         </MainTemplate>

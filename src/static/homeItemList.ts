@@ -27,6 +27,7 @@ export interface ItemContent {
 export interface ItemType {
     id: number;
     banner?: string;
+    bannerType?: 'video' | 'image';
     enTitle: string;
     title: string;
     desc: string;
@@ -42,6 +43,8 @@ const Items: Array<ItemType> = [
         title: "매듭장",
         enTitle: "MAEDEUP",
         desc: "Korean Traditional Decorative Knotting",
+        banner: "https://www.youtube.com/embed/OMzGtjM7jJs",
+        bannerType: "video",
         content: {
             master: "매듭장인, 김은영",
             masterDesc: "무형문화재 제 13호 매듭장, 김은영",
@@ -69,6 +72,7 @@ const Items: Array<ItemType> = [
         image: talImage,
         title: "한국 화회탈",
         banner: hahoemaskBanner,
+        bannerType: "image",
         enTitle: "Hahoe Mask",
         desc: "Korean Traditional  masks or tal.",
         content: {
@@ -98,6 +102,7 @@ const Items: Array<ItemType> = [
         image: broomImage,
         title: "빗자루",
         banner: broomBanner,
+        bannerType: "image",
         enTitle: "BROOM",
         desc: "Korean traditional broom",
         content: {

@@ -6,6 +6,7 @@ const palette = {
     orange1: '#FDF1E3',
     orange2: '#FFB067',
     orange2_p40: '#FFB067E0',
+    orange2_p30: '#FFB067ab',
     /* brown */
     brown0: '#5B534A',
     brown0_p40: '#5B534A66',

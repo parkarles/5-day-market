@@ -111,7 +111,7 @@ const Items: Array<Array<ItemType>> = [
     [{
         id: 6,
         image: "moon_jar",
-        title: "달 항아리",
+        title: "무이 항아리",
         enTitle: "Moon Jar Brown/White",
         price: 150.00,
         content: {
