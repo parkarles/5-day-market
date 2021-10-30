@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, navigate } from "gatsby";
 
 import MainTemplate from "../main/MainTemplate";
 import Grid from "../main/ItemsGrid";
@@ -42,10 +42,9 @@ function HomePage() {
                     <Items itemList={homeItemList} itemSize={itemSize} />
                 </Grid>
             </ItemContainer>
-            <GradientBox> 
-                <p>구독하기 </p>
+            <GradientBox onClick={()=>{navigate('/subscribe')}}> 
+                <p> 구독하기 </p>
             </GradientBox>
-           
         </MainTemplate>
     );
 }
@@ -108,8 +107,9 @@ const ItemContainer = styled.div`
 `;
 
 const GradientBox = styled.div`
+    cursor: pointer;
     width: 100%;
-    height: 40px;
+    height: 50px;
     display: flex;
     justify-items: center;
     align-items: center;
@@ -117,7 +117,7 @@ const GradientBox = styled.div`
     background: linear-gradient(90deg, ${palette.orange0} 0%, ${palette.orange0_p40} 100%);
     & p {
         color: ${palette.white0};
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         text-align: center;
         margin: auto;
     }

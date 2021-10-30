@@ -2,17 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
-import palette from "../../lib/styles/palette";
-import MainTemplate from "../main/MainTemplate";
-import { LogoNot5day } from "../../static/svg";
+import palette from "../lib/styles/palette";
+import MainTemplate from "./main/MainTemplate";
+import { LogoNot5day } from "../static/svg";
 
 export interface ItemProps {
 };
 
-function Items({ }: ItemProps) {
+function Contact({ }: ItemProps) {
     const data = useStaticQuery(graphql`
         query {
-            tigerImage: file(name: {eq: "tiger"}) {
+            hak: file(name: {eq: "hak"}) {
                 publicURL
             }
             patternImage: file(name: {eq: "pattern"}) {
@@ -25,27 +25,21 @@ function Items({ }: ItemProps) {
         <MainTemplate>
             <BackgroundPattern img={data.patternImage.publicURL} />
             <Block>
-                <LogoNot5day />
-                <img className="tiger" src={data.tigerImage.publicURL} />
                 <p>
-                    오늘은 장을 서는 날이 아니에요
+                    <b> CONTACT </b>
+                    <br /><br /><br />
+                    다양한 분야의 브랜드와의 협업을 환영합니다.
+                    <br /><br />
+                    We welcome collaboration with brands in various fields. <br />
+                    We would love to hear from you.
+                    <br /><br />
+                    fivedaymarket.office@gmail.com
                 </p>
-
-                <p>
-                    Five day mark에서는 현대화된 전통제품들을 닷새에 한번 (오일장)<br />
-                     마켓을 열고 있습니다. 달력을 열어 보시려면 클릭해주세요
-                </p>
+                <img className="hak" src={data.hak.publicURL} />
             </Block>
         </MainTemplate>
     )
 }
-
-const BackgroundGradient = styled.div`
-    z-index: -1;
-    width: 100%; height: 100%;
-    position: absolute; left: 0px; top: 0px;
-    background: linear-gradient(${palette.orange2_p40}, ${palette.ivory0_00});
-`;
 
 const BackgroundPattern = styled.div<{ img: string }>`
     z-index: -1;
@@ -69,12 +63,17 @@ const Block = styled.div`
         margin-top: 20px;
         color: ${palette.brown4};
         font-size: 1rem;
+
+        font-family: Roboto;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 150%;
     }
-    img.tiger {
+    img {
         margin: 103px auto 50px;
         display: block;
     }
 
 `;
 
-export default Items;
+export default Contact;

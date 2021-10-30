@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { navigate } from "gatsby";
+import { useStaticQuery, graphql, navigate } from "gatsby";
 
 import MainTemplate from "../main/MainTemplate";
 
@@ -12,7 +12,19 @@ export interface IProps {
 };
 
 function FundingPage({ id = "0" }: IProps) {
+    const data = useStaticQuery(graphql`
+        query {
+            toss: file(name: {eq: "toss"}) {
+                publicURL
+            }
+            npay: file(name: {eq: "npay"}) {
+                publicURL
+            }
+        }
+    `);
+
     const item: ItemType = homeItemList[+id];
+    const [address, setAddress] = useState([]);
 
     if (item === undefined && typeof window !== "undefined") {
         window.alert('유효하지 않은 접근입니다.');
@@ -74,13 +86,44 @@ function FundingPage({ id = "0" }: IProps) {
                         </p>
                     </SponsorInfo>
                     <SubTitle>배송 정보</SubTitle>
+                    <AddressInfo>
+                    {/* {
+                        address.map(ad => <div><p>{ad}</p></div>)
+                    } */}
+                    <div><p>+배송지 추가</p></div>
+                    </AddressInfo>
                     <SubTitle>결제 금액</SubTitle>
-                    <div>
+                    <PaymentInfo>
                         <p>
-                            프로젝투 성공시, 결제는 2022년 2월에 진행됩니다. 프로젝트가 무산되거나 중단된 경우, 예약된 결제는 자동으로 취소됩니다.
+                            프로젝트 성공시, 결제는 2022년 2월에 진행됩니다. 프로젝트가 무산되거나 중단된 경우, 예약된 결제는
+                            자동으로 취소됩니다.
                         </p>
-                    </div>
+                    </PaymentInfo>
+                    <OrderInfo>
+                        <div>
+                            <p>예상 전달일</p>
+                            <p>2022년 2월 5일</p>
+                        </div>
+                        <div>
+                            <p>배송비</p>
+                            <p>무료</p>
+                        </div>
+                        <div>
+                            <p>최종 결제 금액</p>
+                            <p>27,000원</p>
+                        </div>
+                    </OrderInfo>
                     <SubTitle>결제 수단</SubTitle>
+                    <PaymentMethod>
+                        <div><p>카드 결제</p></div>
+                        <div><p>무통장 입금</p></div>
+                        <div><img src={data.npay.publicURL}/></div>
+                        <div><img src={data.toss.publicURL}/></div>
+                    </PaymentMethod>
+                    <AgreeBtnWrapper>
+                        <button /> <p>개인정보 제 3자 제공 동의</p>
+                    </AgreeBtnWrapper>
+                    <FundingButton> 후원하기 </FundingButton>
                 </Grid>
             </MainContainer>
         </MainTemplate>
@@ -96,6 +139,7 @@ const SubTitle = styled.h2`
     color: ${palette.brown4};
     font-size: 1.5rem;
     margin: 0;
+    margin-top: 60px;
 `;
 
 const HeadLine = styled.div`
@@ -104,6 +148,74 @@ const HeadLine = styled.div`
         color: ${palette.brown4};
         font-size: 1rem;
         margin: 7px 0 0;
+    }
+`;
+
+const FundingButton = styled.div`
+    background: linear-gradient(310.9deg, #FF7A00 0%, #FF9534 59.77%, #FFB067 103.15%), linear-gradient(137.64deg, #F2E8DF 0%, #ECE5DF 97.97%), #C4C4C4;
+    box-shadow: 2px 4px 5px rgba(230, 140, 57, 0.3), -3px -3px 5px rgba(255, 148, 49, 0.25), inset 0px -2px 5px rgba(255, 234, 215, 0.4), inset 0px -2px 10px #E8740A, inset 0px 0px 10px rgba(255, 255, 255, 0.54);
+`;
+
+const AgreeBtnWrapper = styled.div`
+display: flex;
+align-items: center;
+// justify-content: center;
+& button {
+    width: 15px;
+    height: 15px;
+    margin-right: 25px;
+}
+`;
+
+const PaymentMethod = styled.div`
+display: flex;
+flex-wrap: wrap;
+margin-top: 20px;
+& > div {
+        flex: 1 1 49%;
+        display: flex;
+        
+        align-items: center;
+        justify-content: center;
+        height: 62px;
+        width: 100%;
+        padding: 20px 40px;
+        border-radius: 6px;
+        text-align: center;
+        background-color: ${palette.white0};
+        border: 1px solid ${palette.brown1};
+        p { 
+            margin: 0;
+            color: #444;
+        }
+    }
+    & div:nth-child(1) { margin: 0 8px 8px 0;}
+    & div:nth-child(3) { margin: 0 8px 0 0;}
+`;
+
+const PaymentInfo = styled.div`
+        font-size: 0.825rem;
+        line-height: 150%;
+        color: ${palette.brown4};
+`;
+
+const AddressInfo = styled.div`
+    & > div {
+        margin-bottom: 60px;
+        p {
+            width: 100%;
+            padding: 20px 40px;
+            border-radius: 6px;
+            text-align: center;
+            background-color: ${palette.white0};
+            border: 1px solid ${palette.brown1};
+
+            font-family: Roboto;
+            font-weight: bold;
+            font-size: 0.825rem;
+            line-height: 150%;
+            color: ${palette.brown4};
+        }
     }
 `;
 

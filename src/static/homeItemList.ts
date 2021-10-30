@@ -43,7 +43,7 @@ const Items: Array<ItemType> = [
         title: "매듭장",
         enTitle: "MAEDEUP",
         desc: "Korean Traditional Decorative Knotting",
-        banner: "https://www.youtube.com/embed/OMzGtjM7jJs",
+        banner: "OMzGtjM7jJs",
         bannerType: "video",
         content: {
             master: "매듭장인, 김은영",
@@ -131,6 +131,8 @@ const Items: Array<ItemType> = [
         image: onggiImage,
         title: "옹기",
         enTitle: "ONGGI",
+        banner: "RlEDX_x9VN4",
+        bannerType: "video",
         desc: "Korean Traditional earthenware vessel",
         content: {
             master: "옹기장인 , 정윤석",
@@ -158,6 +160,8 @@ const Items: Array<ItemType> = [
         image: homiImage,
         title: "호미",
         enTitle: "HOMI",
+        banner: "qQknJ0C9KWo",
+        bannerType: "video",
         desc: "Korean Traditional gardening tool",
         content: {
             master: "대장장이, 이광원",
@@ -189,6 +193,8 @@ const Items: Array<ItemType> = [
         image: gatImage,
         title: "갓",
         enTitle: "GAT",
+        banner: "jNRxeXSTAPE",
+        bannerType: "video",
         desc: "Korean traditional hat",
         content: {
             master: "갓의 장인 , 정춘모",

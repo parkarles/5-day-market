@@ -72,9 +72,9 @@ const Block = styled(Link)<{ size: number, reverse: number }>`
         z-index: -1;
         opacity: 0;
         max-width: 128%; width: 128%; height: 125%;
-        top: 51%; left: 50%;
+        top: 63%; left: 50%;
         transform: translateX(-50%) translateY(calc(-50% + 6rem));
-        transition: transform 0.4s ease-out 0s, opacity 0.7s ease-out 0s;
+        transition: transform 0.6s ease-out 0s, opacity 0.7s ease-in 0s;
     }
 
     &:hover img.gradient {

@@ -2,7 +2,7 @@ import * as React from "react";
 import { PageProps } from "gatsby";
 
 import ContextProvider from "../../components/base/Layout";
-import Home from "../../components/home/HomePage";
+import Contact from "../../components/Contact";
 
 interface IProps extends PageProps {
   id: string;
@@ -11,7 +11,7 @@ interface IProps extends PageProps {
 const IndexPage = () => {
   return (
       <ContextProvider>
-        <Home />
+      <Contact />
       </ContextProvider>
   )
 }

@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { navigate } from "gatsby";
-// import ReactPlayer from 'react-player';
 
+import YouTube, { PlayerVars } from "react-youtube";
 import MainTemplate from "../main/MainTemplate";
 
 import homeItemList, { ItemType } from "../../static/homeItemList";
@@ -22,6 +22,19 @@ function MagazinePage({ id = "0" }: IProp) {
         navigate(-1);
     }
 
+    const vars: PlayerVars = {
+        autoplay: 1,
+        controls: 0,
+        loop: 1,
+        playlist: item.banner
+    }
+
+    const opts = {
+        height: '100%',
+        width: '100%',
+        playerVars: vars
+    };
+
     return (
         <MainTemplate>
             <GradientBox />
@@ -31,13 +44,8 @@ function MagazinePage({ id = "0" }: IProp) {
                         item.bannerType === 'video' ?
                             <VideoContainer>
                                 <div className="abso" />
-                            <iframe width="100%" height="100%" src={item.banner +"?controls=0&autoplay=1&autohide=1&modestbranding=1&fs=0&loop=1&rel=0"} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                            {/* <ReactPlayer url={item.banner} muted playing={true} width={"100%"} height={"100%"}/> */}
+                            <YouTube videoId={item.banner} opts={opts}/>
                             </VideoContainer>
-                            // <video muted autoPlay loop>
-                            //     <source src={item.banner} type="video/mp4" />
-                            //     <strong>Your browser does not support the video tag.</strong>
-                            // </video>
                             :
                             <VideoContainer>
                                 <img src={item.banner} />
@@ -85,12 +93,16 @@ const Grid = styled.div`
 const VideoContainer = styled.div<{src? : string}>`
     width: 100%; height: 100%;
     height: 593px;
+    padding-bottom: 56.25%; /* 16:9 */;
+    height: 0;
     position: relative;
     background-color: ${palette.brown2};
     & > * {
         position: absolute;
         width: 100%;
+        height: 100%;
         opacity: .5;
+        z-index: 0;
     }
     & div.abso {
         width: 100%; height: 100%;
