@@ -121,7 +121,11 @@ function FundingPage({ id = "0" }: IProps) {
                         <div><img src={data.toss.publicURL}/></div>
                     </PaymentMethod>
                     <AgreeBtnWrapper>
-                        <button /> <p>개인정보 제 3자 제공 동의</p>
+                        <input type="checkbox" id="cb" />
+                        <label htmlFor="cb">
+                            <div />
+                            <p>개인정보 제 3자 제공 동의</p>
+                        </label>
                     </AgreeBtnWrapper>
                     <FundingButton> 후원하기 </FundingButton>
                 </Grid>
@@ -154,6 +158,18 @@ const HeadLine = styled.div`
 const FundingButton = styled.div`
     background: linear-gradient(310.9deg, #FF7A00 0%, #FF9534 59.77%, #FFB067 103.15%), linear-gradient(137.64deg, #F2E8DF 0%, #ECE5DF 97.97%), #C4C4C4;
     box-shadow: 2px 4px 5px rgba(230, 140, 57, 0.3), -3px -3px 5px rgba(255, 148, 49, 0.25), inset 0px -2px 5px rgba(255, 234, 215, 0.4), inset 0px -2px 10px #E8740A, inset 0px 0px 10px rgba(255, 255, 255, 0.54);
+    cursor: pointer;
+    color: white;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    background: ${palette.orange0};
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
 `;
 
 const AgreeBtnWrapper = styled.div`
@@ -165,6 +181,36 @@ align-items: center;
     height: 15px;
     margin-right: 25px;
 }
+
+    & input[id="cb"] {
+        display: none;
+    }
+    & input[id="cb"] + label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        & > div {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border: 2px solid #bcbcbc;
+            border-radius: 5px;
+            border: 1px solid ${palette.brown0};
+            width: 16px; height: 16px;
+            margin-right: 10px;
+            position: relative;
+            background-color: ${palette.white0};
+        }
+    }
+    & input[type=checkbox]:checked + label > div::after {
+        position: absolute;
+        top: -2px;
+        left: 1px;
+        content: '✔';
+        font-size: 14px;
+        color: ${palette.brown0};
+    }
 `;
 
 const PaymentMethod = styled.div`
@@ -201,6 +247,7 @@ const PaymentInfo = styled.div`
 
 const AddressInfo = styled.div`
     & > div {
+        cursor: pointer;
         margin-bottom: 60px;
         p {
             width: 100%;

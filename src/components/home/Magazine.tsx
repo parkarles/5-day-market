@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import { navigate } from "gatsby";
 
@@ -15,6 +15,32 @@ interface IProp {
 }
 
 function MagazinePage({ id = "0" }: IProp) {
+    const contentRef = useRef<HTMLDivElement>(null);
+    const stickyTabRef = useRef<HTMLDivElement>(null);
+    const [offset, setOffset] = useState<number | undefined>(undefined);
+    const [height, setHeight] = useState<number>(0);
+    const [initialTop, setInitialTop] = useState<number>(0);
+
+
+    // useEffect(() => {
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => {
+    //         window.removeEventListener('scroll', () => handleScroll);
+    //     };
+    // }, []);
+
+    const handleScroll = () => {
+        if (stickyTabRef.current) {
+            const boundingRect = stickyTabRef.current.getBoundingClientRect();
+            const contentBoundingRect = contentRef.current.getBoundingClientRect();
+            if (contentBoundingRect.y < boundingRect.y) {
+                // console.log('contentBoundingRect.y : ', contentBoundingRect.y);
+                // console.log('boundingRect.y : ', boundingRect.y);
+                // console.log('window.innerHeight : ', window.);
+            }
+        }
+    };
+
     const item: ItemType = homeItemList[+id];
     
     if (item === undefined && typeof window !== "undefined") {
@@ -34,7 +60,7 @@ function MagazinePage({ id = "0" }: IProp) {
         width: '100%',
         playerVars: vars
     };
-
+    
     return (
         <MainTemplate>
             <GradientBox />
@@ -52,7 +78,7 @@ function MagazinePage({ id = "0" }: IProp) {
                             </VideoContainer>
 
             }
-            <MainContainer>
+            <MainContainer ref={contentRef}>
                 <Grid>
                     <DetailLayout item={item} />
                     <FundingInfo>
@@ -67,7 +93,7 @@ function MagazinePage({ id = "0" }: IProp) {
                             감사한 마음에 보답하기 위해서 정말 차근차근 열심히 준비하였습니다.
                         </p>
                     </FundingInfo>
-                    <FundingTab id={item.id} item={item.funding} />
+                    <FundingTab fundingRef={stickyTabRef} id={item.id} item={item.funding}/>
                 </Grid>
             </MainContainer>
         </MainTemplate>
@@ -95,6 +121,7 @@ const VideoContainer = styled.div<{src? : string}>`
     height: 593px;
     padding-bottom: 56.25%; /* 16:9 */;
     height: 0;
+    z-index: 2;
     position: relative;
     background-color: ${palette.brown2};
     & > * {

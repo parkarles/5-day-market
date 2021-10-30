@@ -69,6 +69,7 @@ const Block = styled.div`
         margin-top: 20px;
         color: ${palette.brown4};
         font-size: 1rem;
+        line-height: 150%;
     }
     img.tiger {
         margin: 103px auto 50px;

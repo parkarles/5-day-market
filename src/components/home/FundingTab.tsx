@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import { ItemFunding } from "../../static/homeItemList";
 
@@ -8,18 +8,15 @@ import { Link } from "gatsby";
 type FundingTabProps = {
     id: number;
     item: ItemFunding;
+    // contentRef: React.RefObject<HTMLDivElement>;
+    fundingRef: React.RefObject<HTMLDivElement>;
 }
 
-function FundingTab({ id, item }: FundingTabProps) {
-    // const [timeout, setTimeout] = useState(true);
-    // const now = new Date();
-    // const deadline = item.deadline.getTime() - now.getTime();
-    // useEffect(()=> {
-    //     if (now < item.deadline) setTimeout(false);
-    // }, []);
+function FundingTab({ id, item, fundingRef }: FundingTabProps) {
+   
 
     return (
-        <BlockContainer>
+        <BlockContainer ref={fundingRef}>
             <Block>
                 <FundingInfo>
                     <h2>FUNDING</h2>
@@ -53,13 +50,13 @@ function FundingTab({ id, item }: FundingTabProps) {
 const BlockContainer = styled.div`
     position: absolute;
     left: 100%;
+    z-index: -1;
 `;
 
 const Block = styled.div`
     position: fixed;
     max-width: 250px;
     width: 100%;
-    top: 45%;
     top: calc(50% - 157px);
     margin-left: 3.3rem;
     background-color: ${palette.ivory2};
