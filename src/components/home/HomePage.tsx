@@ -96,6 +96,7 @@ const InfoContainer = styled.div<{ img: string}>`
     h4 {
         font-weight: normal;
         font-size: 1.125rem;
+        line-height: 2.5;
         color: ${palette.brown3};
     }
 `;
